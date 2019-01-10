@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunHost", "RunHost\RunHost.csproj", "{2E1A0724-B00A-456C-954B-0743D89E3299}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "siteHost", "..\siteHost\siteHost.csproj", "{D7637423-D8B1-4210-97BE-29030A666110}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,5 +15,9 @@ Global
 		{2E1A0724-B00A-456C-954B-0743D89E3299}.Debug|x86.Build.0 = Debug|x86
 		{2E1A0724-B00A-456C-954B-0743D89E3299}.Release|x86.ActiveCfg = Release|x86
 		{2E1A0724-B00A-456C-954B-0743D89E3299}.Release|x86.Build.0 = Release|x86
+		{D7637423-D8B1-4210-97BE-29030A666110}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D7637423-D8B1-4210-97BE-29030A666110}.Debug|x86.Build.0 = Debug|Any CPU
+		{D7637423-D8B1-4210-97BE-29030A666110}.Release|x86.ActiveCfg = Release|Any CPU
+		{D7637423-D8B1-4210-97BE-29030A666110}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
