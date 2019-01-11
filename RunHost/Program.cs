@@ -1,11 +1,7 @@
 ﻿using System;
-using System.IO;
-using System.Reflection;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Builder.Extensions;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Hosting;
-using SiteHost;
+using siteHost;
 
 
 namespace RunHost
@@ -18,29 +14,23 @@ namespace RunHost
 
             var webhost = new WebHostBuilder()
                 .UseKestrel()
+                .UseSockets()
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5433")
+                .UseUrls("http://localhost:5432")
                 .Build();
 
             webhost.Run();
 
             Console.ReadLine();
 
-
+           //Application will stop right here.
         }
 
         public class Startup
         {
             public void Configure(IApplicationBuilder app)
             {
-
-                var xmlName = "Doesnt.Matter.xml";
-                var xmlPath = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), xmlName);
-
-                app.UseMagicOnionSwagger(new SwaggerOptions("SiteHost.Site", "Site Test", "/")
-                {
-                    XmlDocumentPath = xmlPath
-                });
+                app.UseSite(new SiteOptions());
             }
         }
     }
